@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Depresión MARDS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="video-section">
+            <h2>Captura de Video</h2>
+            <video id="videoElement" width="320" height="240" autoplay></video>
+            <button id="startTestBtn" onclick="startTest()">Iniciar Test</button>
+        </div>
+
+        <div id="userFormDialog" class="modal">
+            <div class="modal-content">
+                <h2>Datos del Usuario</h2>
+                <label for="age">Edad:</label>
+                <input type="number" id="age" min="12" max="65">
+                <span id="ageError" class="error"></span>
+                <label for="gender">Género:</label>
+                <select id="gender">
+                    <option value="">Seleccione</option>
+                    <option value="0">Mujer</option>
+                    <option value="1">Hombre</option>
+                </select>
+                <span id="genderError" class="error"></span>
+                <button onclick="submitUserForm()">Comenzar Test</button>
+            </div>
+        </div>
+
+        <div id="testSection" class="hidden">
+            <h2>Preguntas del Test</h2>
+            <div id="questionDisplay" class="question"></div>
+            <button id="nextQuestionBtn" onclick="nextQuestion()">Siguiente</button>
+        </div>
+
+        <div id="completionDialog" class="modal">
+            <div class="modal-content">
+                <h2>Test Completado</h2>
+                <p>¡Felicidades! Has completado el test.</p>
+                <button onclick="closeCompletionDialog()">Cerrar</button>
+            </div>
+        </div>
+
+        <button id="viewScoreBtn" onclick="viewScore()" disabled>Ver Puntaje</button>
+        <div id="scoreDialog" class="modal">
+            <div class="modal-content">
+                <h2>Puntaje</h2>
+                <p id="scoreDisplay">Tu puntaje es: </p>
+                <button onclick="closeScoreDialog()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

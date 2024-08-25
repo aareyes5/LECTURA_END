@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../modulos señales"
+		},
+		{
+			"path": "../modulo interfaz"
+		}
+	],
+	"settings": {}
+}
